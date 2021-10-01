@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <lightning:listView aura:id="listViewProjects"
+    objectApiName="Project__c"
+    listName="Custom_List_View"
+    rows="5"
+    showSearchBar="false"
+    showActionBar="false"
+    enableInlineEdit="true"
+    showRowLevelActions="false"
+/>
+</aura:component>	

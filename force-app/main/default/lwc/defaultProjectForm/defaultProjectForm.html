@@ -1,0 +1,22 @@
+<template>
+    <template if:false={isLoaded}>                                                   
+        <lightning-spinner alternative-text="Loading" size="small" variant="brand">    
+        </lightning-spinner>
+    </template>
+    <lightning-card>
+    <lightning-layout>
+    <lightning-record-edit-form object-api-name="Project__c" onsuccess={handleSuccess}>
+        <lightning-messages></lightning-messages>
+        <div class="slds-m-around_medium">
+            <lightning-input-field field-name='Name' value={defaultName}></lightning-input-field>
+            <lightning-input-field field-name='Type__c' value={defaultType}></lightning-input-field>
+            <lightning-input-field field-name='Notes__c' value={defaultNotes}></lightning-input-field>
+            <div class="slds-m-top_medium">
+                <lightning-button variant="brand" type="submit" name="Create Project" label="Create Project">
+                </lightning-button>
+           </div>
+       </div>
+    </lightning-record-edit-form>
+</lightning-layout>
+</lightning-card>
+</template>
